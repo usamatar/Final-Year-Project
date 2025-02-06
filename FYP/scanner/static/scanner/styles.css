@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://melapress.com/wp-content/uploads/2023/03/wordpress-vulnerability-scanner.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+        
+    color: white;
+    background: rgb(51, 51, 51);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50vw; /* Adjust width as needed */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #333;
+}
+
+a {
+    color: #5cb85c;
+    text-decoration: none;
+}

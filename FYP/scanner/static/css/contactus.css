@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #DEE2D6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    background-color: #001d4a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 60px; /* Height of the navbar */
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #eca400;
+    padding: 15px 15px; /* Adjust padding as needed */
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(39, 68, 211, 0.3);
+    border-radius: 5px;
+}
+
+.content {
+    padding-left: 50px; 
+    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+    width: 100%;
+    margin-top: 60px; /*To prevent content from being hidden behind the navbar */
+    background-image: url('contactpic.jpg'); /* Ensure the correct path to your image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Center the background image */
+}
+
+h2{
+    margin-bottom: 0px;
+}
+
+p{
+    margin-top: 0px;
+}
+
+
+.heading{
+    font-size: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.pcontent{
+    font-size: 15px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-right: 40px;
+}
+
+.emailtext{
+    font-size: 20px;
+    color: lightblue;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 50%;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #001d4a;
+    color: #eca400;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+    color: #eca400;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

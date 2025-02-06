@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/networkscan.css' %}">
+{% endblock css %}
+
+{% block content %}
+  <div class="content">
+    <form action="{% url 'network_ip' %}" method='post'>
+        {% csrf_token %}
+        <div class="form-container">
+            <h2 style="color: #eca400;">Enter IP or URL</h2>
+            <input type="text" name='ip_address' id="inputField" placeholder="Enter IP or URL" class="form-control">
+            <button class="btn btn-primary mt-3" onclick="validateInput()" type='Submit' >Submit</button>
+            <p id="errorMessage" class="error-message mt-3"></p>
+        </div>
+    </form>
+  </div>
+<script>
+    function validateInput() {
+        const input = document.getElementById('inputField').value;
+        const errorMessage = document.getElementById('errorMessage');
+        const ipPattern = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+        const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+
+        if (!(ipPattern.test(input) || urlPattern.test(input))) {
+            errorMessage.textContent = '';
+            alert('Input is valid!');
+        } 
+    }
+</script>
+{% endblock content %}

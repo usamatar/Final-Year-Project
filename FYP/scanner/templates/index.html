@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock css %}
+
+{% block content %}
+<!-- carousel -->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src='{% static "img/slider1.jpeg" %}' class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>SentinelSecure</h3>
+        <p>"Fortifying Your Digital Defenses with Sentinel Secure - Your Shield Against Vulnerabilities!"</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src='{% static "img/slider2.jpeg" %}' class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>SentinelSecure</h3>
+        <p>"Sentinel Secure identifies vulnerabilities across web applications, networks, and operating systems, generates detailed reports, and provides actionable recommendations for remediation.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<div class="backcolor">
+  <h1 class="othercontent">SentinelSecure</h1>
+  <p class="othercontentp">A cutting-edge cybersecurity system called SentinelSecure will be created to fortify digital defenses against persistent cyber threats. A unique vulnerability assessment tool with cutting-edge recommendation system for accuracy thorough coverage across networks, web applications, and computer systems will be introduced in this project. Assuring a more secure digital future, SentinelSecure is likely to become a crucial tool in the fight against cyber attackers. </p>
+</div>
+{% endblock content %}

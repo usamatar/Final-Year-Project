@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/scan.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <br>
+    <br>
+    <div class="backcolor">
+        <div class="container py-4">
+            <h1 class="othercontent">SentinelSecure's scans</h1>
+            <p style="font-size: 20px;">
+                Explore a variety of tailored scans to meet your specific requirements. Click on the image to initiate the scan:
+            </p>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href='{% url "webscan" %}'><img style="border-radius: 3px;" src='{% static "img/websc.jpeg" %}' alt="Scan 1" class="img-fluid"></a>
+                    <p class="text-center mt-2 text" style="font-size: 30px;">Web scan</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href='{% url "networkscan" %}'><img style="border-radius: 3px;" src='{% static "img/netsc.jpeg" %}' alt="Scan 2" class="img-fluid"></a>
+                    <p class="text-center mt-2" style="font-size: 30px;">Network scan</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href='{% url "compsysscan" %}'><img style="border-radius: 3px;" src='{% static "img/syssc.jpeg" %}' alt="Scan 3" class="img-fluid"></a>
+                    <p class="text-center mt-2" style="font-size: 30px;">System scan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}
+

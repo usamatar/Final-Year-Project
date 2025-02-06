@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vulnerability Scanner</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'scanner/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Vulnerability Scanner</h1>
+        
+        <!-- Form to scan a URL -->
+        <form action="{% url 'scan' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="url" placeholder="Enter URL to scan">
+            <button type="submit">Scan URL</button>
+        </form>
+        
+        <!-- Form to scan an IP address -->
+        <form action="{% url 'scan_ip' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="ip_address" placeholder="Enter IP Address to scan">
+            <button type="submit">Scan IP</button>
+        </form>
+        
+        <!-- Form to scan a network IP -->
+        <form action="{% url 'network_ip' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="ip_address" placeholder="Enter IP Ad to scan">
+            <button type="submit">Scan Network IP</button>
+        </form>
+    </div>
+</body>
+</html>

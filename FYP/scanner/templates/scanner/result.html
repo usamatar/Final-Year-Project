@@ -1,0 +1,127 @@
+{% extends "base.html" %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'scanner/styles.css' %}"
+/>
+
+{% endblock css %} {% block content %}
+<div class="my-5 ">
+<div class="my-5 ">
+    <div class="container ">
+        <h1>Scan Result</h1>
+        <table>
+          {% if host %}
+          <tr>
+            <th>Host</th>
+            <td>{{ host }}</td>
+          </tr>
+          <tr>
+            <th>Server</th>
+            <td>{{ server }}</td>
+          </tr>
+          <tr>
+            <th>X-Powered-By</th>
+            <td>{{ powered_by }}</td>
+          </tr>
+          <tr>
+            <th>SQL Injection Vulnerable</th>
+            <td>{{ sql_injection_vulnerable }}</td>
+          </tr>
+          <tr>
+            <th>XSS Vulnerable</th>
+            <td>{{ xss_vulnerable }}</td>
+          </tr>
+          <tr>
+            <th>Command Injection Vulnerable</th>
+            <td>{{ command_injection_vulnerable }}</td>
+          </tr>
+          <tr>
+            <th>Local File Inclusion (LFI) Vulnerable</th>
+            <td>{{ lfi_vulnerable }}</td>
+          </tr>
+          <tr>
+            <th>Remote File Inclusion (RFI) Vulnerable</th>
+            <td>{{ rfi_vulnerable }}</td>
+          </tr>
+          {% elif ip_address %}
+          <tr>
+            <th>IP Address</th>
+            <td>{{ ip_address }}</td>
+          </tr>
+          <tr>
+            <th>OS Information</th>
+            <td>{{ os_info }}</td>
+          </tr>
+          <tr>
+            <th>OS Command Injection Vulnerable</th>
+            <td>{{ os_command_injection_vulnerable }}</td>
+          </tr>
+          <tr>
+            <th>OS Remote Code Execution Vulnerable</th>
+            <td>{{ os_remote_code_execution_vulnerable }}</td>
+          </tr>
+          <tr>
+            <th>OS Privilege Escalation Vulnerable</th>
+            <td>{{ os_privilege_escalation_vulnerable }}</td>
+          </tr>
+          <tr>
+            <th>OS Misconfigurations</th>
+            <td>{{ os_misconfigurations }}</td>
+          </tr>
+          {% elif network_info %}
+          <tr>
+            <th>IP Address</th>
+            <td>{{ ip_address }}</td>
+          </tr>
+          <tr>
+            <th>Network Computer Virus</th>
+            <td>{{ network_computer_virus }}</td>
+          </tr>
+          <tr>
+            <th>Network Firewall Misconfigurations</th>
+            <td>{{ network_firewall_misconfigurations }}</td>
+          </tr>
+          <tr>
+            <th>Network Insecure Remote Access</th>
+            <td>{{ network_insecure_remote_access }}</td>
+          </tr>
+          <tr>
+            <th>Network Misconfigurations</th>
+            <td>{{ network_misconfigurations }}</td>
+          </tr>
+          {% endif %}
+        </table>
+      
+        <div class="recommendations">
+          <h2>Recommendations</h2>
+          {% if web_recommendations %}
+          <h3>Web</h3>
+          <ul>
+            {% for recommendation in web_recommendations %}
+            <li>{{ recommendation }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %} {% if os_recommendations %}
+          <h3>Operating System</h3>
+          <ul>
+            {% for recommendation in os_recommendations %}
+            <li>{{ recommendation }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %} {% if network_recommendations %}
+          <h3>Networking</h3>
+          <ul>
+            {% for recommendation in network_recommendations %}
+            <li>{{ recommendation }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        <a href="{% url 'index' %}">Back to Home</a>
+      </div>
+      </div>
+</div>
+{% endblock content %}

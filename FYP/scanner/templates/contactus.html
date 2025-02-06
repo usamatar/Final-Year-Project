@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/contactus.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel Secure</title>
+    <link rel="stylesheet" href="contactus.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li style="font-size: large; color: #eca400; margin-right: 10px; margin-left: 5px;">SentinelSecure</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="scan.html">Scan</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="heading">
+            <h2>Contact us:</h2>
+        </div>
+        <div class="pcontent">
+            <p>Are you concerned about the security of your web applications, networks, or computer systems? Introducing our state-of-the-art vulnerability assessment tool, designed to identify and address potential threats before they become serious issues. Our comprehensive tool scans and evaluates your entire digital infrastructure, pinpointing vulnerabilities in web applications, networks, and computer systems, and providing detailed recommendations on how to fix them. Don't leave your security to chance—reach out to us today <span class="emailtext">Sentinelsecure@gmail.com</span> message us on WhatsApp to safeguard your digital assets and ensure your peace of mind. Let's fortify your security together!</p>
+        </div>
+        
+    </div>
+
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/+923494915219" target="_blank">
+            <img src="whatsappLogo.jpg" alt="WhatsApp">
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SentinelSecure. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
+{% endblock content %}
+

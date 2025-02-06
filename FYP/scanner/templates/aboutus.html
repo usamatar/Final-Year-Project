@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <br>
+    <br>
+    <div class="backcolor">
+        <div class="container py-4">
+            <h1 class="othercontent">SentinelSecure</h1>
+            <p class="othercontentp">
+                A cutting-edge cybersecurity system called SentinelSecure will be created to fortify digital defenses against persistent cyber threats. A unique vulnerability assessment tool with cutting-edge recommendation system for accuracy thorough coverage across networks, web applications, and computer systems will be introduced in this project. Assuring a more secure digital future, SentinelSecure is likely to become a crucial tool in the fight against cyber attackers.
+            </p>
+            <h2 class="othercontent">Web vulnerability assessment</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="othercontentp">
+                      Web vulnerability assessment is a crucial process in cybersecurity that involves identifying, analyzing, and addressing potential security weaknesses within web applications. This assessment helps organizations proactively detect vulnerabilities such as SQL injection, cross-site scripting (XSS). By performing regular vulnerability assessments, businesses can mitigate risks, protect sensitive data, and maintain a secure web environment.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                  <img src='{% static "img/webvul.jpeg" %}' class="img-fluid " alt="Feature Image">
+              </div>
+              
+            </div>
+            <h2 class="othercontent">network vulnerability assessment</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="othercontentp">
+                      Network vulnerability assessment involves evaluating and identifying potential security weaknesses within a network infrastructure, including routers, switches, and servers. This process helps organizations preemptively detect vulnerabilities such as outdated firmware, misconfigurations, and unauthorized access points. By conducting regular assessments, businesses can enhance network security, mitigate risks, and safeguard critical data from cyber threats.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                  <img src='{% static "img/netvul.jpeg" %}' class="img-fluid " alt="Feature Image">
+              </div>
+              
+            </div>
+            <h2 class="othercontent">Computer system vulnerability assessment</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="othercontentp">
+                      Computer vulnerability assessment entails systematically identifying and analyzing security weaknesses in computer systems, including operating systems. This proactive approach helps organizations understand and mitigate risks such as outdated software patches, configuration errors, and potential malware exploits. By conducting regular assessments, businesses can strengthen their overall cybersecurity posture and protect sensitive information from evolving cyber threats.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                  <img src='{% static "img/compvul.jpeg" %}' class="img-fluid " alt="Feature Image">
+              </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+
